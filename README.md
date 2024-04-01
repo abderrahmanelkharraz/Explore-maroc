@@ -1,66 +1,48 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MarocExplore API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Contexte du projet
 
-## About Laravel
+Dans le cadre de la promotion du tourisme au Maroc, la plateforme "MarocExplore" souhaite concevoir une API dédiée à la gestion d'itinéraires, mettant en avant la diversité et la richesse des destinations marocaines.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Objectif du Projet
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+L'objectif principal de ce projet est de développer une API robuste pour la gestion d'itinéraires, permettant aux utilisateurs authentifiés de créer des itinéraires personnalisés composés d'un titre, d'une catégorie (plage, montagne, rivière, monument, etc.), d'une durée, d'une image et de 2 ou plusieurs destinations. Chaque destination sera caractérisée par son nom, un lieu de logement et une liste des endroits à visiter/activités/plats à essayer.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## User Stories
 
-## Learning Laravel
+    En tant qu'utilisateur, je veux pouvoir créer un compte et m'authentifier sur l'API.
+    En tant qu'utilisateur authentifié, je veux pouvoir créer un nouvel itinéraire.
+    En tant qu'utilisateur authentifié, je veux pouvoir ajouter plusieurs destinations à un itinéraire.
+    En tant qu'utilisateur authentifié, je veux que seuls mes propres itinéraires soient modifiables.
+    En tant qu'utilisateur authentifié, je veux pouvoir ajouter un itinéraire à ma liste à visiter.
+    En tant qu'internaute, je veux pouvoir visualiser les différents itinéraires sur la plateforme.
+    En tant qu'internaute, je veux pouvoir rechercher des itinéraires et les filtrer par catégorie ou par durée.
+    En tant que développeur, je veux avoir des tests unitaires complets pour chaque fonctionnalité de l'API.
+    En tant que développeur, je veux effectuer des tests sur Postman pour valider le bon fonctionnement de l'API dans différents scénarios.
+    En tant que développeur, je veux fournir une documentation détaillée de l'API pour faciliter son utilisation par d'autres développeurs. Cette documentation sera créée à l'aide d'outils tels que Postman, Swagger, API Blueprint ou d'autres outils similaires ayant le même objectif.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Bonus
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    Utilisation de JWT pour l'authentification des utilisateurs, offrant une méthode sécurisée et standardisée d'authentification.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+    Clonez le dépôt GitHub.
+    Assurez-vous d'avoir PHP et Composer installés localement.
+    Installez les dépendances avec composer install.
+    Créez un fichier .env en vous basant sur le fichier .env.example et configurez votre base de données et d'autres paramètres si nécessaire.
+    Générez une clé d'application avec php artisan key:generate.
+    Exécutez les migrations avec php artisan migrate pour mettre en place la base de données.
+    Démarrez le serveur de développement avec php artisan serve.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Documentation de l'API
 
-### Premium Partners
+La documentation détaillée de l'API est disponible dans le fichier MarocExploreAPI.postman_collection. Elle a été générée à l'aide de Postman et fournit des exemples d'utilisation de chaque endpoint de l'API.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Tests
 
-## Contributing
+L'API est livrée avec des tests unitaires complets pour chaque fonctionnalité. Exécutez les tests avec php artisan test.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Contribuer
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Les contributions sont les bienvenues ! Pour toute suggestion, rapport de bug ou demande de fonctionnalité, veuillez ouvrir une issue pour en discuter.
